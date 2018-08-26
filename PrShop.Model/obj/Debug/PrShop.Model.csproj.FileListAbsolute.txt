@@ -1,0 +1,10 @@
+D:\ASP.Net\PrShop\PrShop.Model\bin\Debug\PrShop.Model.dll.config
+D:\ASP.Net\PrShop\PrShop.Model\bin\Debug\PrShop.Model.dll
+D:\ASP.Net\PrShop\PrShop.Model\bin\Debug\PrShop.Model.pdb
+D:\ASP.Net\PrShop\PrShop.Model\bin\Debug\EntityFramework.dll
+D:\ASP.Net\PrShop\PrShop.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\ASP.Net\PrShop\PrShop.Model\bin\Debug\EntityFramework.xml
+D:\ASP.Net\PrShop\PrShop.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\ASP.Net\PrShop\PrShop.Model\obj\Debug\PrShop.Model.csprojResolveAssemblyReference.cache
+D:\ASP.Net\PrShop\PrShop.Model\obj\Debug\PrShop.Model.dll
+D:\ASP.Net\PrShop\PrShop.Model\obj\Debug\PrShop.Model.pdb

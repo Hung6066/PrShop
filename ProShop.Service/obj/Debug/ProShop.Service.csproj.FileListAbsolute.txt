@@ -1,0 +1,11 @@
+D:\ASP.Net\PrShop\ProShop.Service\bin\Debug\ProShop.Service.dll
+D:\ASP.Net\PrShop\ProShop.Service\bin\Debug\ProShop.Service.pdb
+D:\ASP.Net\PrShop\ProShop.Service\bin\Debug\ProShop.Data.dll
+D:\ASP.Net\PrShop\ProShop.Service\bin\Debug\PrShop.Common.dll
+D:\ASP.Net\PrShop\ProShop.Service\bin\Debug\PrShop.Model.dll
+D:\ASP.Net\PrShop\ProShop.Service\bin\Debug\ProShop.Data.pdb
+D:\ASP.Net\PrShop\ProShop.Service\bin\Debug\PrShop.Common.pdb
+D:\ASP.Net\PrShop\ProShop.Service\bin\Debug\PrShop.Model.pdb
+D:\ASP.Net\PrShop\ProShop.Service\obj\Debug\ProShop.Service.csprojResolveAssemblyReference.cache
+D:\ASP.Net\PrShop\ProShop.Service\obj\Debug\ProShop.Service.dll
+D:\ASP.Net\PrShop\ProShop.Service\obj\Debug\ProShop.Service.pdb
