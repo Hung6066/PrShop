@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace ProShop.Web.Controllers
+namespace PrShop.Web.Controllers
 {
     public class HomeController : Controller
     {

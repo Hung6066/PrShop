@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace ProShop.Web
+namespace PrShop.Web
 {
     public class BundleConfig
     {
