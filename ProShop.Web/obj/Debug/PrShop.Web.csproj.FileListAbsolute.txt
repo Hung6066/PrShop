@@ -73,3 +73,15 @@ D:\ASP.Net\PrShop\Git\ProShop.Web\bin\System.ValueTuple.dll
 D:\ASP.Net\PrShop\Git\ProShop.Web\bin\AutoMapper.pdb
 D:\ASP.Net\PrShop\Git\ProShop.Web\bin\AutoMapper.xml
 D:\ASP.Net\PrShop\Git\ProShop.Web\bin\System.ValueTuple.xml
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\Microsoft.AspNet.Identity.Core.dll
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\Microsoft.Owin.Security.Cookies.dll
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\Microsoft.Owin.Security.dll
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\Microsoft.Owin.Security.OAuth.dll
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\Microsoft.AspNet.Identity.Core.xml
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\Microsoft.Owin.Security.xml
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\Microsoft.Owin.Security.Cookies.xml
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\Microsoft.Owin.Security.OAuth.xml

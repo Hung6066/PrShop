@@ -10,8 +10,12 @@ D:\ASP.Net\PrShop\Git\ProShop.Data\bin\Debug\PrShop.Model.pdb
 D:\ASP.Net\PrShop\Git\ProShop.Data\bin\Debug\EntityFramework.xml
 D:\ASP.Net\PrShop\Git\ProShop.Data\bin\Debug\EntityFramework.SqlServer.xml
 D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\PrShop.Data.csprojResolveAssemblyReference.cache
-D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\PrShop.Data.Migrations.InitialDB.resources
-D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\PrShop.Data.Migrations.AddErrorTable.resources
-D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\PrShop.Data.csproj.GenerateResource.Cache
 D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\ProShop.Data.dll
 D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\ProShop.Data.pdb
+D:\ASP.Net\PrShop\Git\ProShop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\ASP.Net\PrShop\Git\ProShop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\ASP.Net\PrShop\Git\ProShop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\ASP.Net\PrShop\Git\ProShop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\ProShop.Data.Migrations.IntergrateAspnetIdentity.resources
+D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\PrShop.Data.csproj.GenerateResource.Cache
+D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\ProShop.Data.Migrations.ChangeKey.resources

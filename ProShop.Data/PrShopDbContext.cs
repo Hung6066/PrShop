@@ -1,9 +1,10 @@
-﻿using PrShop.Model.Models;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using PrShop.Model.Models;
 using System.Data.Entity;
 
 namespace PrShop.Data
 {
-    public class PrShopDbContext : DbContext
+    public class PrShopDbContext : IdentityDbContext<ApplicationUser>
     {
         public PrShopDbContext() : base("PrShopConnection")
         {
@@ -29,10 +30,16 @@ namespace PrShop.Data
         public DbSet<Tag> Tags { get; set; }
         public DbSet<VisitorStatistic> VisitorStatisticsS { get; set; }
         public DbSet<Error> Errors { get; set; }
-
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        public static PrShopDbContext Create()
         {
-            base.OnModelCreating(modelBuilder);
+            return new PrShopDbContext();
+        }
+
+        protected override void OnModelCreating(DbModelBuilder builder)
+        {
+            builder.Entity<IdentityUserRole>().HasKey(i => new { i.UserId, i.RoleId });
+            builder.Entity<IdentityUserLogin>().HasKey(i => i.UserId);
+            
         }
     }
 }

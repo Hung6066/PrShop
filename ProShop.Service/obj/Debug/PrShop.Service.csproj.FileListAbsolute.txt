@@ -11,3 +11,7 @@ D:\ASP.Net\PrShop\Git\ProShop.Service\bin\Debug\EntityFramework.xml
 D:\ASP.Net\PrShop\Git\ProShop.Service\obj\Debug\PrShop.Service.csprojResolveAssemblyReference.cache
 D:\ASP.Net\PrShop\Git\ProShop.Service\obj\Debug\ProShop.Service.dll
 D:\ASP.Net\PrShop\Git\ProShop.Service\obj\Debug\ProShop.Service.pdb
+D:\ASP.Net\PrShop\Git\ProShop.Service\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\ASP.Net\PrShop\Git\ProShop.Service\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\ASP.Net\PrShop\Git\ProShop.Service\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\ASP.Net\PrShop\Git\ProShop.Service\bin\Debug\Microsoft.AspNet.Identity.Core.xml

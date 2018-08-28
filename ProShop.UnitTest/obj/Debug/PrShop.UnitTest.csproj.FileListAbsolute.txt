@@ -74,3 +74,7 @@ D:\ASP.Net\PrShop\Git\ProShop.UnitTest\bin\Debug\Autofac.xml
 D:\ASP.Net\PrShop\Git\ProShop.UnitTest\bin\Debug\Autofac.Integration.Mvc.xml
 D:\ASP.Net\PrShop\Git\ProShop.UnitTest\bin\Debug\Autofac.Integration.WebApi.pdb
 D:\ASP.Net\PrShop\Git\ProShop.UnitTest\bin\Debug\Autofac.Integration.WebApi.xml
+D:\ASP.Net\PrShop\Git\ProShop.UnitTest\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\ASP.Net\PrShop\Git\ProShop.UnitTest\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\ASP.Net\PrShop\Git\ProShop.UnitTest\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\ASP.Net\PrShop\Git\ProShop.UnitTest\bin\Debug\Microsoft.AspNet.Identity.Core.xml
