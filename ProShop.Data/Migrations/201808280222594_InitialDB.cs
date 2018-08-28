@@ -1,4 +1,4 @@
-namespace ProShop.Data.Migrations
+namespace PrShop.Data.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

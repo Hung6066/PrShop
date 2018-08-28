@@ -1,4 +1,3 @@
-D:\ASP.Net\PrShop\Git\ProShop.Service\obj\Debug\PrShop.Service.csprojResolveAssemblyReference.cache
 D:\ASP.Net\PrShop\Git\ProShop.Service\bin\Debug\ProShop.Service.dll
 D:\ASP.Net\PrShop\Git\ProShop.Service\bin\Debug\ProShop.Service.pdb
 D:\ASP.Net\PrShop\Git\ProShop.Service\bin\Debug\ProShop.Data.dll
@@ -9,5 +8,6 @@ D:\ASP.Net\PrShop\Git\ProShop.Service\bin\Debug\ProShop.Data.pdb
 D:\ASP.Net\PrShop\Git\ProShop.Service\bin\Debug\PrShop.Common.pdb
 D:\ASP.Net\PrShop\Git\ProShop.Service\bin\Debug\PrShop.Model.pdb
 D:\ASP.Net\PrShop\Git\ProShop.Service\bin\Debug\EntityFramework.xml
+D:\ASP.Net\PrShop\Git\ProShop.Service\obj\Debug\PrShop.Service.csprojResolveAssemblyReference.cache
 D:\ASP.Net\PrShop\Git\ProShop.Service\obj\Debug\ProShop.Service.dll
 D:\ASP.Net\PrShop\Git\ProShop.Service\obj\Debug\ProShop.Service.pdb
