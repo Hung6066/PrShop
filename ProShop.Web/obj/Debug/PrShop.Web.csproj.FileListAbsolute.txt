@@ -68,3 +68,8 @@ D:\ASP.Net\PrShop\Git\ProShop.Web\bin\System.Web.Http.xml
 D:\ASP.Net\PrShop\Git\ProShop.Web\bin\System.Web.Http.WebHost.xml
 D:\ASP.Net\PrShop\Git\ProShop.Web\obj\Debug\ProShop.Web.dll
 D:\ASP.Net\PrShop\Git\ProShop.Web\obj\Debug\ProShop.Web.pdb
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\AutoMapper.dll
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\System.ValueTuple.dll
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\AutoMapper.pdb
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\AutoMapper.xml
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\System.ValueTuple.xml

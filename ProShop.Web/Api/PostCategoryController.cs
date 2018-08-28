@@ -1,4 +1,7 @@
-﻿using PrShop.Model.Models;
+﻿using AutoMapper;
+using ProShop.Web.Infrastructure.Extensions;
+using ProShop.Web.Models;
+using PrShop.Model.Models;
 using PrShop.Service;
 using PrShop.Web.Infrastructure.Core;
 using System.Collections.Generic;
@@ -11,43 +14,29 @@ namespace PrShop.Web.Api
     [RoutePrefix("api/postcategory")]
     public class PostCategoryController : ApiControllerBase
     {
-        IPostCategoryService _postCategoryService;
-        public PostCategoryController(IErrorService errorService, IPostCategoryService postCategoryService): base(errorService)
+        private IPostCategoryService _postCategoryService;
+
+        public PostCategoryController(IErrorService errorService, IPostCategoryService postCategoryService) : base(errorService)
         {
             _postCategoryService = postCategoryService;
         }
+
         [Route("getall")]
         public HttpResponseMessage Get(HttpRequestMessage request)
         {
             return CreateHttpResponse(request, () =>
             {
-
                 var listCategory = _postCategoryService.GetAll();
 
-                HttpResponseMessage response = request.CreateResponse(HttpStatusCode.OK, listCategory);
-                
-                return response;
-            });
-        }
-        public HttpResponseMessage Create(HttpRequestMessage request, PostCategory postCategory)
-        {
-            return CreateHttpResponse(request, () =>
-            {
-                HttpResponseMessage response = null;
-                if (ModelState.IsValid)
-                {
-                    request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
-                }else
-                {
-                    var category = _postCategoryService.Add(postCategory);
-                    _postCategoryService.saveChanges();
+                var listPostCategoryVm = Mapper.Map<List<PostCategoryViewModel>>(listCategory);
 
-                    response = request.CreateResponse(HttpStatusCode.Created, category);
-                }
+                HttpResponseMessage response = request.CreateResponse(HttpStatusCode.OK, listPostCategoryVm);
+
                 return response;
             });
         }
-        public HttpResponseMessage Update(HttpRequestMessage request, PostCategory postCategory)
+        [Route("add")]
+        public HttpResponseMessage Post(HttpRequestMessage request, PostCategoryViewModel postCategoryVm)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -58,7 +47,33 @@ namespace PrShop.Web.Api
                 }
                 else
                 {
-                    _postCategoryService.Update(postCategory);
+
+                    PostCategory newPostCategory = new PostCategory();
+                    newPostCategory.UpdatePostCategory(postCategoryVm);
+
+                    var category = _postCategoryService.Add(newPostCategory);
+                    _postCategoryService.saveChanges();
+
+                    response = request.CreateResponse(HttpStatusCode.Created, category);
+                }
+                return response;
+            });
+        }
+        [Route("update")]
+        public HttpResponseMessage Put(HttpRequestMessage request, PostCategoryViewModel postCategoryVm)
+        {
+            return CreateHttpResponse(request, () =>
+            {
+                HttpResponseMessage response = null;
+                if (ModelState.IsValid)
+                {
+                    request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+                else
+                {
+                    var postCategoryDb = _postCategoryService.GetById(postCategoryVm.ID);
+                    postCategoryDb.UpdatePostCategory(postCategoryVm);
+                    _postCategoryService.Update(postCategoryDb);
                     _postCategoryService.saveChanges();
 
                     response = request.CreateResponse(HttpStatusCode.OK);
@@ -66,6 +81,7 @@ namespace PrShop.Web.Api
                 return response;
             });
         }
+        [Route("delete")]
         public HttpResponseMessage Delete(HttpRequestMessage request, int id)
         {
             return CreateHttpResponse(request, () =>
@@ -85,7 +101,5 @@ namespace PrShop.Web.Api
                 return response;
             });
         }
-
-
     }
 }
