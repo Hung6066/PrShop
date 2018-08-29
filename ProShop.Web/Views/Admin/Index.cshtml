@@ -5,15 +5,21 @@
 
 <!DOCTYPE html>
 
-<html ng-app="PrShop">
+<html ng-app="myModule">
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
     <script src="~/Scripts/plugins/angular/angular.js"></script>
+    <script src="~/Scripts/spa/app.js"></script>
 </head>
-<body>
-    <div>
-        10 + 20 = {{10+20}} 
+<body >
+    <div ng-controller="schoolController">
+        <div pr-shop-directive></div>
+        {{message}}
+        <input type="number" ng-model="num" /> Value of {{num}}
+        <button ng-click="checkNumber()">Check Number</button>
+    
+        <br/>
     </div>
 </body>
 </html>
