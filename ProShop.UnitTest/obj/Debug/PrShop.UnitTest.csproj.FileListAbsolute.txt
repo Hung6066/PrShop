@@ -78,3 +78,13 @@ D:\ASP.Net\PrShop\Git\ProShop.UnitTest\bin\Debug\Microsoft.AspNet.Identity.Entit
 D:\ASP.Net\PrShop\Git\ProShop.UnitTest\bin\Debug\Microsoft.AspNet.Identity.Core.dll
 D:\ASP.Net\PrShop\Git\ProShop.UnitTest\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 D:\ASP.Net\PrShop\Git\ProShop.UnitTest\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\ASP.Net\PrShop\Git\ProShop.UnitTest\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+D:\ASP.Net\PrShop\Git\ProShop.UnitTest\bin\Debug\Microsoft.Owin.Security.dll
+D:\ASP.Net\PrShop\Git\ProShop.UnitTest\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+D:\ASP.Net\PrShop\Git\ProShop.UnitTest\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+D:\ASP.Net\PrShop\Git\ProShop.UnitTest\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+D:\ASP.Net\PrShop\Git\ProShop.UnitTest\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+D:\ASP.Net\PrShop\Git\ProShop.UnitTest\bin\Debug\Microsoft.Owin.Security.xml
+D:\ASP.Net\PrShop\Git\ProShop.UnitTest\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+D:\ASP.Net\PrShop\Git\ProShop.UnitTest\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+D:\ASP.Net\PrShop\Git\ProShop.UnitTest\bin\Debug\Microsoft.Owin.Security.OAuth.xml
