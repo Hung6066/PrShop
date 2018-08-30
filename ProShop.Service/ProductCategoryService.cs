@@ -19,6 +19,8 @@ namespace ProShop.Service
 
         IEnumerable<ProductCategory> GetAll();
 
+        IEnumerable<ProductCategory> GetAll(string keyword);
+
         IEnumerable<ProductCategory> GetAllByParentId(int parentId);
 
         ProductCategory GetById(int id);
@@ -70,6 +72,14 @@ namespace ProShop.Service
         public void saveChanges()
         {
             _unitOfWork.Commit();
+        }
+
+        public IEnumerable<ProductCategory> GetAll(string keyword)
+        {
+            if (!string.IsNullOrEmpty(keyword))
+                return _productCategoryRepository.GetMulti(x => x.Name.Contains(keyword) || x.Description.Contains(keyword));
+            else
+                return _productCategoryRepository.GetAll();
         }
     }
 }

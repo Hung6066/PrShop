@@ -8,11 +8,19 @@
         $scope.page = 0;
         $scope.pagesCount = 0;
         $scope.getListProductCategories = getListProductCategories;
+        $scope.keyword = '';
+
+        $scope.search = search;
+
+        function search() {
+            getListProductCategories();
+        }
 
         function getListProductCategories(page) {
             page = page | 0;
             var config = {
                 params: {
+                    keyword : $scope.keyword,
                     page: page,
                     pageSize: 2
                 }
