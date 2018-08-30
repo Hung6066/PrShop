@@ -11,6 +11,9 @@
         $scope.keyword = '';
 
         $scope.search = search;
+        
+
+
 
         function search() {
             getListProductCategories();
@@ -28,9 +31,10 @@
             apiService.get('/api/productcategory/getall', config, function (result) {
                 if (result.data.TotalCount == 0) {
                     notificationService.displayWarning('Không có bản in nào được tìm thấy.');
-                } else {
-                    notificationService.displaySuccess('Đã tìm thấy ' + result.data.TotalCount);
                 }
+                //else {
+                //    notificationService.displaySuccess('Đã tìm thấy ' + result.data.TotalCount);
+                //}
 
                 $scope.productCategories = result.data.Items;
                 $scope.page = result.data.Page;
