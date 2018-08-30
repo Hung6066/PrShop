@@ -21,3 +21,4 @@ D:\ASP.Net\PrShop\Git\PrShop.Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 D:\ASP.Net\PrShop\Git\PrShop.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 D:\ASP.Net\PrShop\Git\PrShop.Model\obj\Debug\PrShop.Model.dll
 D:\ASP.Net\PrShop\Git\PrShop.Model\obj\Debug\PrShop.Model.pdb
+D:\ASP.Net\PrShop\Git\PrShop.Model\obj\Debug\PrShop.Model.csprojResolveAssemblyReference.cache
