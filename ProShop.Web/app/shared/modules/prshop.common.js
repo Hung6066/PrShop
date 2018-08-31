@@ -1,3 +1,3 @@
 ﻿(function () {
-    angular.module('prshop.common', ['ui.router'])
+    angular.module('prshop.common', ['ui.router', 'ngBootbox'])
 })();
