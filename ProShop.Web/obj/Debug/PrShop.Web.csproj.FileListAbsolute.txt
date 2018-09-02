@@ -85,3 +85,4 @@ D:\ASP.Net\PrShop\Git\ProShop.Web\bin\System.Web.Http.WebHost.xml
 D:\ASP.Net\PrShop\Git\ProShop.Web\obj\Debug\PrShop.Web.csprojResolveAssemblyReference.cache
 D:\ASP.Net\PrShop\Git\ProShop.Web\obj\Debug\ProShop.Web.dll
 D:\ASP.Net\PrShop\Git\ProShop.Web\obj\Debug\ProShop.Web.pdb
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\CKFinder.dll
