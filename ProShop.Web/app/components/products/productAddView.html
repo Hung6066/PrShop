@@ -18,12 +18,12 @@
             <h3 class="box-title">Thêm mới</h3>
         </div><!-- /.box-header -->
         <!-- form start -->
-        <form class="form-horizontal" novalidate name="frmAddProduct" role="form" ng-submit="Addproduct()">
+        <form class="form-horizontal" novalidate name="frmAddProduct" role="form" ng-submit="AddProduct()">
             <div class="box-body">
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Tên sản phẩm </label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" required name="name" ng-model="product.Name">
+                        <input type="text" class="form-control" ng-change="GetSeoTitle()" required name="name" ng-model="product.Name">
                         <span ng-show="frmAddProduct.name.$invalid" class="has-error">Phải nhập tên sản phẩm</span>
                         <span ng-show="frmAddProduct.name.$error.maxlenght" class="has-error">Tên sản phẩm chỉ được 256 ký tự</span>
                     </div>
@@ -47,10 +47,10 @@
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Danh mục</label>
                     <div class="col-sm-10">
-                        <select name="parentId" required class="form-control" ng-model="product.ParentID" ng-options="option.ID as option.Name for option in productCategories">
+                        <select name="parentId" required class="form-control" ng-model="product.CategoryID" ng-options="option.ID as option.Name for option in productCategories">
                             <option value="">-- Chọn danh mục</option>
                         </select>
-                        <input type="hidden" name="parentId" ng-model="product.ParentID" />
+                        <input type="hidden" name="parentId" ng-model="product.CategoryID" />
                         <span ng-show="frmAddProduct.parentId.$error.maxlenght" class="has-error">Phải chọn danh mục</span>
                     </div>
                 </div>
@@ -79,13 +79,19 @@
                     <div class="col-sm-10">
                         <input type="text" class="form-control" name="image" ng-model="product.Image">
                         <span ng-show="frmAddProduct.image.$error.maxlenght" class="has-error">Hình ảnh chỉ được 256 ký tự</span>
-                        <button class="btn btn-default" ng-click="ChooseImage()">Chọn ảnh</button>
+                        <button class="btn btn-default" type="button" ng-click="ChooseImage()">Chọn ảnh</button>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Mô tả sản phẩm</label>
                     <div class="col-sm-10">
                         <textarea class="form-control" name="content" ckeditor="ckeditorOptions" ng-model="product.Content"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Tag</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="tags" ng-model="product.Tags">
                     </div>
                 </div>
                 <div class="form-group">

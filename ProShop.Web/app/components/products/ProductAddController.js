@@ -4,11 +4,11 @@
 (function (app) {
     app.controller('productAddController', productAddController);
 
-    productAddController.$inject = ['apiService', '$scope', 'notificationService', '$state'];
+    productAddController.$inject = ['apiService', '$scope', 'notificationService', '$state','commonService'];
 
 
-    function productAddController(apiService, $scope, notificationService, $state) {
-        $scope.productCategory = {
+    function productAddController(apiService, $scope, notificationService, $state, commonService) {
+        $scope.product = {
             CreatedDate: new Date(),
             Status: true
         }
@@ -21,10 +21,17 @@
             
         }
 
+        $scope.GetSeoTitle = GetSeoTitle;
+
+        function GetSeoTitle() {
+            $scope.product.Alias = commonService.getSeoTitle($scope.product.Name);
+        }
+
+
         function AddProduct() {
-            apiService.post('api/products/create', $scope.productCategory, function (result) {
+            apiService.post('api/product/create', $scope.product, function (result) {
                 notificationService.displaySuccess(result.data.Name + ' đã được thêm mới')
-                $state.go('product_categories');
+                $state.go('products');
             }, function (error) {
                 notificationService.displayError('Thêm mới không thành công.');
 
@@ -52,4 +59,4 @@
     }
 
 
-})(angular.module('prshop.product_categories'))
+})(angular.module('prshop.products'))

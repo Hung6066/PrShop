@@ -99,7 +99,7 @@
                     pageSize: 2
                 }
             }
-            apiService.get('/api/products/getall', config, function (result) {
+            apiService.get('/api/product/getall', config, function (result) {
                 if (result.data.TotalCount == 0) {
                     notificationService.displayWarning('Không có bản in nào được tìm thấy.');
                 }

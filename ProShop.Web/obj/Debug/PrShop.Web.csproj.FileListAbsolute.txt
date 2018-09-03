@@ -18,6 +18,7 @@ D:\ASP.Net\PrShop\Git\ProShop.Web\bin\Autofac.dll
 D:\ASP.Net\PrShop\Git\ProShop.Web\bin\Autofac.Integration.Mvc.dll
 D:\ASP.Net\PrShop\Git\ProShop.Web\bin\Autofac.Integration.WebApi.dll
 D:\ASP.Net\PrShop\Git\ProShop.Web\bin\AutoMapper.dll
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\CKFinder.dll
 D:\ASP.Net\PrShop\Git\ProShop.Web\bin\EntityFramework.dll
 D:\ASP.Net\PrShop\Git\ProShop.Web\bin\EntityFramework.SqlServer.dll
 D:\ASP.Net\PrShop\Git\ProShop.Web\bin\Microsoft.AspNet.Identity.Core.dll
@@ -85,4 +86,3 @@ D:\ASP.Net\PrShop\Git\ProShop.Web\bin\System.Web.Http.WebHost.xml
 D:\ASP.Net\PrShop\Git\ProShop.Web\obj\Debug\PrShop.Web.csprojResolveAssemblyReference.cache
 D:\ASP.Net\PrShop\Git\ProShop.Web\obj\Debug\ProShop.Web.dll
 D:\ASP.Net\PrShop\Git\ProShop.Web\obj\Debug\ProShop.Web.pdb
-D:\ASP.Net\PrShop\Git\ProShop.Web\bin\CKFinder.dll

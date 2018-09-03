@@ -1,4 +1,5 @@
-﻿using PrShop.Data.Infrastructure;
+﻿using PrShop.Common;
+using PrShop.Data.Infrastructure;
 using PrShop.Data.Repositories;
 using PrShop.Model.Models;
 using System.Collections.Generic;
@@ -26,38 +27,96 @@ namespace ProShop.Service
 
         public class ProductService : IProductService
         {
-            private IProductRepository _ProductRepository;
+            private IProductRepository _productRepository;
+            private ITagRepository _tagRepository;
+            private IProductTagRepository _productTagRespository;
             private IUnitOfWork _unitOfWork;
 
-            public ProductService(IProductRepository ProductRepository, IUnitOfWork unitOfWork)
+            public ProductService(IProductRepository ProductRepository,
+                IProductTagRepository productTagRespository,
+                ITagRepository tagResponsitory,
+                IUnitOfWork unitOfWork)
             {
-                _ProductRepository = ProductRepository;
+                _productRepository = ProductRepository;
+                _productTagRespository = productTagRespository;
+                _tagRepository = tagResponsitory;
                 _unitOfWork = unitOfWork;
             }
 
-            public Product Add(Product category)
+            public Product Add(Product product)
+
             {
-                return _ProductRepository.Add(category);
+                var p = _productRepository.Add(product);
+                _unitOfWork.Commit();
+                if (!string.IsNullOrEmpty(product.Tags))
+                {
+                    string[] tags = product.Tags.Split(',');
+                    for(var i = 0; i < tags.Length; i++)
+                    {
+                        var tagId = StringHelper.ToUnsignString(tags[i]);
+                        if(_tagRepository.Count(x=>x.ID == tagId) == 0)
+                        {
+                            Tag tag = new Tag();
+                            tag.ID = tagId;
+                            tag.Name = tags[i];
+                            tag.Type = CommonConstants.ProductTag;
+                            _tagRepository.Add(tag);
+                        }
+
+                        ProductTag productTag = new ProductTag();
+                        productTag.ProductID = product.ID;
+                        productTag.TagID = tagId;
+                        _productTagRespository.Add(productTag);
+
+                    }
+                    
+                }
+                return p;
             }
 
             public Product Delete(int id)
             {
-                return _ProductRepository.Delete(id);
+                return _productRepository.Delete(id);
             }
 
             public IEnumerable<Product> GetAll()
             {
-                return _ProductRepository.GetAll();
+                return _productRepository.GetAll();
             }
 
             public Product GetById(int id)
             {
-                return _ProductRepository.GetSingleById(id);
+                return _productRepository.GetSingleById(id);
             }
 
-            public void Update(Product Product)
+            public void Update(Product product)
             {
-                _ProductRepository.Update(Product);
+                _productRepository.Update(product);
+                if (!string.IsNullOrEmpty(product.Tags))
+                {
+                    string[] tags = product.Tags.Split(',');
+                    for (var i = 0; i < tags.Length; i++)
+                    {
+                        var tagId = StringHelper.ToUnsignString(tags[i]);
+                        if (_tagRepository.Count(x => x.ID == tagId) == 0)
+                        {
+                            Tag tag = new Tag();
+                            tag.ID = tagId;
+                            tag.Name = tags[i];
+                            tag.Type = CommonConstants.ProductTag;
+                            _tagRepository.Add(tag);
+                            
+                        }
+                        _productTagRespository.DeleteMulti(x => x.ProductID == product.ID);
+                        ProductTag productTag = new ProductTag();
+                        productTag.ProductID = product.ID;
+                        productTag.TagID = tagId;
+                        _productTagRespository.Add(productTag);
+
+                    }
+                    
+                }
+                
             }
 
             public void saveChanges()
@@ -68,9 +127,9 @@ namespace ProShop.Service
             public IEnumerable<Product> GetAll(string keyword)
             {
                 if (!string.IsNullOrEmpty(keyword))
-                    return _ProductRepository.GetMulti(x => x.Name.Contains(keyword) || x.Description.Contains(keyword));
+                    return _productRepository.GetMulti(x => x.Name.Contains(keyword) || x.Description.Contains(keyword));
                 else
-                    return _ProductRepository.GetAll();
+                    return _productRepository.GetAll();
             }
         }
     }

@@ -16,7 +16,7 @@ using static ProShop.Service.productService;
 
 namespace ProShop.Web.Api
 {
-    [RoutePrefix("api/products")]
+    [RoutePrefix("api/product")]
     public class ProductController : ApiControllerBase
     {
         private IProductService _productService;

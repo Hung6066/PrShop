@@ -30,6 +30,8 @@ namespace PrShop.Model.Models
         public bool? HomeFlag { get; set; }
         public bool? HotFlag { get; set; }
         public int? ViewCount { get; set; }
+        [MaxLength(50)]
+        public string Tags { get; set; }
 
         [ForeignKey("CategoryID")]
         public virtual ProductCategory ProductCategory { get; set; }

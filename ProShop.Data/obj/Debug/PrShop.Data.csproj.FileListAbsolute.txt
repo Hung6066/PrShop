@@ -16,6 +16,7 @@ D:\ASP.Net\PrShop\Git\ProShop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFra
 D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\PrShop.Data.csprojResolveAssemblyReference.cache
 D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\ProShop.Data.Migrations.IntergrateAspnetIdentity.resources
 D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\ProShop.Data.Migrations.ChangeKey.resources
+D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\ProShop.Data.Migrations.AddTagField.resources
 D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\PrShop.Data.csproj.GenerateResource.Cache
 D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\ProShop.Data.dll
 D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\ProShop.Data.pdb
