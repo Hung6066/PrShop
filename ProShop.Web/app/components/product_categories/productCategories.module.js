@@ -8,8 +8,8 @@
     function config($stateProvider, $urlRouterProvider) {
         $stateProvider.state('product_categories', {
             url: "/product_categories",
-            parent: 'base',
             templateUrl: "/app/components/product_categories/productCategoryListView.html",
+            parent: 'base',
             controller: "productCategoryListController"
         }).state('add_product_category', {
             url: "/add_product_category",

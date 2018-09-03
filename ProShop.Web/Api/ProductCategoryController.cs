@@ -17,6 +17,7 @@ using System.Web.Script.Serialization;
 namespace ProShop.Web.Api
 {
     [RoutePrefix("api/productcategory")]
+    [Authorize]
     public class ProductCategoryController : ApiControllerBase
     {
         private IProductCategoryService _productCategoryService;
@@ -60,7 +61,6 @@ namespace ProShop.Web.Api
 
         [Route("getall")]
         [HttpGet]
-        [AllowAnonymous]
         public HttpResponseMessage GetAll(HttpRequestMessage request,string keyword, int page, int pageSize = 20)
         {
             return CreateHttpResponse(request, () =>
@@ -100,6 +100,7 @@ namespace ProShop.Web.Api
                 var newProductCategory = new ProductCategory();
                 newProductCategory.UpdateProductCategory(productCategoryVm);
                 newProductCategory.CreateDate = DateTime.Now;
+                    newProductCategory.CreateBy = User.Identity.Name;
                 _productCategoryService.Add(newProductCategory);
                 _productCategoryService.saveChanges();
 
@@ -127,7 +128,7 @@ namespace ProShop.Web.Api
                 {
                     var dbProductCategory = _productCategoryService.GetById(productCategoryVm.ID);
                     dbProductCategory.UpdateDate = DateTime.Now;
-
+                    dbProductCategory.CreateBy = User.Identity.Name;
                     dbProductCategory.UpdateProductCategory(productCategoryVm);
 
                     _productCategoryService.Update(dbProductCategory);
@@ -144,7 +145,6 @@ namespace ProShop.Web.Api
         }
         [Route("delete")]
         [HttpDelete]
-        [AllowAnonymous]
         public HttpResponseMessage Delete(HttpRequestMessage request, int id)
         {
             return CreateHttpResponse(request, () =>
@@ -170,7 +170,6 @@ namespace ProShop.Web.Api
         }
         [Route("deletemulti")]
         [HttpDelete]
-        [AllowAnonymous]
         public HttpResponseMessage DeleteMulti(HttpRequestMessage request, string checkedProductCategories)
         {
             return CreateHttpResponse(request, () =>

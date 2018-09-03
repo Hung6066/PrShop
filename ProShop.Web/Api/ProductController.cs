@@ -17,6 +17,7 @@ using static ProShop.Service.productService;
 namespace ProShop.Web.Api
 {
     [RoutePrefix("api/product")]
+    [Authorize]
     public class ProductController : ApiControllerBase
     {
         private IProductService _productService;
@@ -58,7 +59,6 @@ namespace ProShop.Web.Api
 
         [Route("getall")]
         [HttpGet]
-        [AllowAnonymous]
         public HttpResponseMessage GetAll(HttpRequestMessage request, string keyword, int page, int pageSize = 20)
         {
             return CreateHttpResponse(request, () =>
@@ -100,6 +100,7 @@ namespace ProShop.Web.Api
                     var newProduct = new Product();
                     newProduct.UpdateProduct(ProductVm);
                     newProduct.CreateDate = DateTime.Now;
+                    newProduct.CreateBy = User.Identity.Name;
                     _productService.Add(newProduct);
                     _productService.saveChanges();
 
@@ -126,7 +127,7 @@ namespace ProShop.Web.Api
                 {
                     var dbProduct = _productService.GetById(ProductVm.ID);
                     dbProduct.UpdateDate = DateTime.Now;
-
+                    dbProduct.UpdateBy = User.Identity.Name;
                     dbProduct.UpdateProduct(ProductVm);
 
                     _productService.Update(dbProduct);
@@ -142,7 +143,6 @@ namespace ProShop.Web.Api
 
         [Route("delete")]
         [HttpDelete]
-        [AllowAnonymous]
         public HttpResponseMessage Delete(HttpRequestMessage request, int id)
         {
             return CreateHttpResponse(request, () =>
@@ -167,7 +167,6 @@ namespace ProShop.Web.Api
 
         [Route("deletemulti")]
         [HttpDelete]
-        [AllowAnonymous]
         public HttpResponseMessage DeleteMulti(HttpRequestMessage request, string checkedProducts)
         {
             return CreateHttpResponse(request, () =>
