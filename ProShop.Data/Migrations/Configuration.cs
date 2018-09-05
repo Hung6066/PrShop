@@ -17,7 +17,12 @@
         protected override void Seed(PrShop.Data.PrShopDbContext context)
         {
             CreatedProductCategorySample(context);            //var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new PrShopDbContext()));
+            CreateSlide(context);
 
+           
+        }
+        private void CreateUser(PrShopDbContext context)
+        {
             //var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new PrShopDbContext()));
 
             //var user = new ApplicationUser()
@@ -67,6 +72,40 @@
             if(context.Footers.Count(x=>x.ID == CommonConstants.DefaultFooterId) == 0)
             {
 
+            }
+        }
+        private void CreateSlide(PrShopDbContext context)
+        {
+            if (context.Slides.Count() == 0)
+            {
+                List<Slide> listSlide = new List<Slide>()
+                {
+                    new Slide() {
+                        Name ="Slide 1",
+                        DisplayOrder =1,
+                        Status =true,
+                        Url ="#",
+                        Image ="/Assets/client/images/bag.jpg",
+                        Content =@"	<h2>FLAT 50% 0FF</h2>
+                                <label>FOR ALL PURCHASE <b>VALUE</b></label>
+                                <p>Lorem ipsum dolor sit amet, consectetur 
+                            adipisicing elit, sed do eiusmod tempor incididunt ut labore et </ p >
+                        <span class=""on-get"">GET NOW</span>" },
+                    new Slide() {
+                        Name ="Slide 2",
+                        DisplayOrder =2,
+                        Status =true,
+                        Url ="#",
+                        Image ="/Assets/client/images/bag1.jpg",
+                    Content=@"<h2>FLAT 50% 0FF</h2>
+                                <label>FOR ALL PURCHASE <b>VALUE</b></label>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et </ p >
+
+                                <span class=""on-get"">GET NOW</span>"},
+                };
+                context.Slides.AddRange(listSlide);
+                context.SaveChanges();
             }
         }
     }

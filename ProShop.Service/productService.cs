@@ -3,6 +3,8 @@ using PrShop.Data.Infrastructure;
 using PrShop.Data.Repositories;
 using PrShop.Model.Models;
 using System.Collections.Generic;
+using System;
+using System.Linq;
 
 namespace ProShop.Service
 {
@@ -19,6 +21,8 @@ namespace ProShop.Service
             IEnumerable<Product> GetAll();
 
             IEnumerable<Product> GetAll(string keyword);
+            IEnumerable<Product> GetLastest(int top);
+            IEnumerable<Product> GetHotProduct(int top);
 
             Product GetById(int id);
 
@@ -130,6 +134,16 @@ namespace ProShop.Service
                     return _productRepository.GetMulti(x => x.Name.Contains(keyword) || x.Description.Contains(keyword));
                 else
                     return _productRepository.GetAll();
+            }
+
+            public IEnumerable<Product> GetLastest(int top)
+            {
+                return _productRepository.GetMulti(x => x.Status).OrderByDescending(x => x.CreateDate).Take(top);
+            }
+
+            public IEnumerable<Product> GetHotProduct(int top)
+            {
+                return _productRepository.GetMulti(x => x.Status && x.HotFlag == true).OrderByDescending(x => x.CreateDate).Take(top);
             }
         }
     }

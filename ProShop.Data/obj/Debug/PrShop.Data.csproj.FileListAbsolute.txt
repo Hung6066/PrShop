@@ -20,3 +20,4 @@ D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\ProShop.Data.Migrations.AddTagField
 D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\PrShop.Data.csproj.GenerateResource.Cache
 D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\ProShop.Data.dll
 D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\ProShop.Data.pdb
+D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\ProShop.Data.Migrations.AddContentToSlide.resources
