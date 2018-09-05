@@ -1,5 +1,6 @@
 ﻿namespace ProShop.Data.Migrations
 {
+    using PrShop.Common;
     using PrShop.Data;
     using PrShop.Model.Models;
     using System.Collections.Generic;
@@ -59,6 +60,13 @@
             };
                 context.ProductCategories.AddRange(listProductCategory);
                 context.SaveChanges();
+            }
+        }
+        private void CreateFooter(PrShopDbContext context)
+        {
+            if(context.Footers.Count(x=>x.ID == CommonConstants.DefaultFooterId) == 0)
+            {
+
             }
         }
     }
