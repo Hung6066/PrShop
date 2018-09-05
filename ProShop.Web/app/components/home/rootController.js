@@ -11,6 +11,6 @@
         }
         $scope.authentication = authData.authenticationData;
 
-        authenticationService.validateRequest();
+        //authenticationService.validateRequest();
     }
 })(angular.module('prshop'));
