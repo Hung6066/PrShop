@@ -1,3 +1,4 @@
+D:\ASP.Net\PrShop\Git\ProShop.Web\obj\Debug\PrShop.Web.csprojResolveAssemblyReference.cache
 D:\ASP.Net\PrShop\Git\ProShop.Web\bin\roslyn\csc.exe
 D:\ASP.Net\PrShop\Git\ProShop.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 D:\ASP.Net\PrShop\Git\ProShop.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -83,6 +84,5 @@ D:\ASP.Net\PrShop\Git\ProShop.Web\bin\Newtonsoft.Json.xml
 D:\ASP.Net\PrShop\Git\ProShop.Web\bin\System.Net.Http.Formatting.xml
 D:\ASP.Net\PrShop\Git\ProShop.Web\bin\System.Web.Http.xml
 D:\ASP.Net\PrShop\Git\ProShop.Web\bin\System.Web.Http.WebHost.xml
-D:\ASP.Net\PrShop\Git\ProShop.Web\obj\Debug\PrShop.Web.csprojResolveAssemblyReference.cache
 D:\ASP.Net\PrShop\Git\ProShop.Web\obj\Debug\ProShop.Web.dll
 D:\ASP.Net\PrShop\Git\ProShop.Web\obj\Debug\ProShop.Web.pdb
