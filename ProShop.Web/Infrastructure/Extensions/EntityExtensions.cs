@@ -65,6 +65,7 @@ namespace ProShop.Web.Infrastructure.Extensions
             product.Promotion = productVm.Promotion;
             product.Warranty = productVm.Warranty;
             product.HomeFlag = productVm.HomeFlag;
+            product.HotFlag = productVm.HotFlag;
             product.ViewCount = productVm.ViewCount;
 
             product.CreateDate = productVm.CreateDate;

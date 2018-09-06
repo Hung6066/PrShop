@@ -219,9 +219,12 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\IFooterService.cs" />
+    <Compile Include="Controllers\PostController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2918,7 +2921,10 @@
     <Folder Include="app\shared\footer\" />
     <Folder Include="app\shared\navigation\" />
     <Folder Include="UploadedFiles\" />
-    <Folder Include="Views\Admin\" />
+    <Folder Include="Views\About\" />
+    <Folder Include="Views\Account\" />
+    <Folder Include="Views\Post\" />
+    <Folder Include="Views\Product\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -3181,8 +3187,12 @@
     <Content Include="Assets\admin\libs\angular-local-storage\LICENSE" />
     <Content Include="Assets\admin\libs\angular-local-storage\package.json" />
     <Content Include="Assets\admin\libs\angular-local-storage\README.md" />
-    <Content Include="ConnectionString.config" />
-    <Content Include="AppSetting.config" />
+    <Content Include="ConnectionString.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="AppSetting.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Assets\client\images\Thumbs.db" />
     <None Include="Project_Readme.html" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -3190,6 +3200,7 @@
     <Content Include="Views\Shared\Footer.cshtml" />
     <Content Include="Views\Shared\Header.cshtml" />
     <Content Include="Views\Shared\Layouts.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProShop.Data\PrShop.Data.csproj">
