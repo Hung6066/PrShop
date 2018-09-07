@@ -2,6 +2,7 @@
 using ProShop.Service;
 using ProShop.Web.Models;
 using PrShop.Model.Models;
+using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
 using static ProShop.Service.productService;
@@ -21,7 +22,7 @@ namespace PrShop.Web.Controllers
             _productService = productService;
         }
 
-
+        [OutputCache(Duration = 60, Location = System.Web.UI.OutputCacheLocation.Server)]
         public ActionResult Index()
         {
             var slideModel = _commonService.GetSlides();
@@ -54,10 +55,12 @@ namespace PrShop.Web.Controllers
         }
 
         [ChildActionOnly]
+        [OutputCache(Duration =3600)]
         public ActionResult Footer()
         {
             var footerModel = _commonService.GetFooter();
             var footerViewModel = Mapper.Map<Footer, FooterViewModel>(footerModel);
+            ViewBag.Time = DateTime.Now.ToString("T");
             return PartialView(footerViewModel);
         }
 
@@ -68,6 +71,7 @@ namespace PrShop.Web.Controllers
         }
 
         [ChildActionOnly]
+        [OutputCache(Duration = 3600)]
         public ActionResult Category()
         {
             var model = _productCategoryService.GetAll();
