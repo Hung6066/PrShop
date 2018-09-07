@@ -6,3 +6,4 @@ D:\ASP.Net\PrShop\Git\PrShop.Common\bin\Debug\PrShop.Common.dll
 D:\ASP.Net\PrShop\Git\PrShop.Common\bin\Debug\PrShop.Common.pdb
 D:\ASP.Net\PrShop\Git\PrShop.Common\obj\Debug\PrShop.Common.dll
 D:\ASP.Net\PrShop\Git\PrShop.Common\obj\Debug\PrShop.Common.pdb
+D:\ASP.Net\PrShop\Git\PrShop.Common\obj\Debug\PrShop.Common.csprojResolveAssemblyReference.cache

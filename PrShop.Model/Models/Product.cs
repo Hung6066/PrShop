@@ -32,6 +32,7 @@ namespace PrShop.Model.Models
         public int? ViewCount { get; set; }
         [MaxLength(50)]
         public string Tags { get; set; }
+        public int Quantity { get; set; }
 
         [ForeignKey("CategoryID")]
         public virtual ProductCategory ProductCategory { get; set; }

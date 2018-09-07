@@ -76,6 +76,7 @@ namespace ProShop.Web.Infrastructure.Extensions
             product.MetaDescription = productVm.MetaDescription;
             product.Status = productVm.Status;
             product.Tags = productVm.Tags;
+            product.Quantity = productVm.Quantity;
 
 
         }
