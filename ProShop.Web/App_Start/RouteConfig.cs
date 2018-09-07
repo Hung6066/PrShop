@@ -26,6 +26,12 @@ namespace PrShop.Web
                defaults: new { controller = "Account", action = "Login", id = UrlParameter.Optional },
                namespaces: new string[] { "PrShop.Web.Controllers" }
            );
+            routes.MapRoute(
+              name: "Page",
+              url: "trang/{alias}.html",
+              defaults: new { controller = "Page", action = "Index", alias = UrlParameter.Optional },
+              namespaces: new string[] { "PrShop.Web.Controllers" }
+          );
 
             routes.MapRoute(
                name: "About",

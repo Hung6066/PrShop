@@ -101,6 +101,14 @@ namespace ProShop.Web.Infrastructure.Extensions
 
 
         }
+        public static void UpdatePage(this Page page, PageViewModel pageVm)
+        {
+            page.ID = pageVm.ID;
+            page.Name = pageVm.Name;
+            page.Alias = pageVm.Alias;
+            page.Content = pageVm.Content;
+            pageVm.Status = pageVm.Status;
+        }
 
     }
 }

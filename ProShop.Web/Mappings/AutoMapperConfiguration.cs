@@ -18,6 +18,7 @@ namespace ProShop.Web.Mappings
                 cfg.CreateMap<ProductCategory, ProductCategoryViewModel>();
                 cfg.CreateMap<Footer, FooterViewModel>();
                 cfg.CreateMap<Slide, SlideViewModel>();
+                cfg.CreateMap<Page, PageViewModel>();
 
                 });
           
