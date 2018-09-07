@@ -2,12 +2,13 @@
 using PrShop.Model.Models;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace PrShop.Data.Repositories
 {
     public interface IProductRepository : IRepository<Product>
     {
-        IEnumerable<Product> GetByAlias(string alias);
+        IEnumerable<Product> GetListProductByTag(string tagId, int page, int pageSize, out int totalRow);
     }
 
     public class ProductRepository : RepositoryBase<Product>, IProductRepository
@@ -16,9 +17,15 @@ namespace PrShop.Data.Repositories
         {
         }
 
-        public IEnumerable<Product> GetByAlias(string alias)
+        public IEnumerable<Product> GetListProductByTag(string tagId, int page, int pageSize, out int totalRow)
         {
-            return DbContext.Products.Where(x => x.Alias == alias);
+            var query = from p in DbContext.Products
+                        join pt in DbContext.ProductTags
+                        on p.ID equals pt.ProductID
+                        where pt.TagID == tagId
+                        select p;
+            totalRow = query.Count();
+            return query.OrderByDescending(x=>x.CreateDate).Skip((page - 1) * pageSize).Take(pageSize);
         }
     }
 }

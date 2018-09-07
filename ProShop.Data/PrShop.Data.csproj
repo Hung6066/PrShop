@@ -84,6 +84,10 @@
     <Compile Include="Migrations\201809070057209_AddMoreQuantity.Designer.cs">
       <DependentUpon>201809070057209_AddMoreQuantity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809070244157_Addforeinkey.cs" />
+    <Compile Include="Migrations\201809070244157_Addforeinkey.Designer.cs">
+      <DependentUpon>201809070244157_Addforeinkey.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PrShopDbContext.cs" />
@@ -137,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809070057209_AddMoreQuantity.resx">
       <DependentUpon>201809070057209_AddMoreQuantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809070244157_Addforeinkey.resx">
+      <DependentUpon>201809070244157_Addforeinkey.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

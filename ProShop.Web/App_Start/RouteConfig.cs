@@ -47,6 +47,12 @@ namespace PrShop.Web
                defaults: new { controller = "Product", action = "Detail", id = UrlParameter.Optional },
                namespaces: new string[] { "PrShop.Web.Controllers" }
            );
+            routes.MapRoute(
+              name: "TagList",
+              url: "tag/{tagId}.html",
+              defaults: new { controller = "Product", action = "ListByTag", tagId = UrlParameter.Optional },
+              namespaces: new string[] { "PrShop.Web.Controllers" }
+          );
 
             routes.MapRoute(
                 name: "Default",
