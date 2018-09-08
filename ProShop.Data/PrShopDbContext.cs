@@ -22,7 +22,6 @@ namespace PrShop.Data
         public DbSet<PostTag> PostTags { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductCategory> ProductCategories { get; set; }
-
         public DbSet<ProductTag> ProductTags { get; set; }
         public DbSet<Slide> Slides { get; set; }
         public DbSet<SupportOnline> SupportOnlines { get; set; }
@@ -30,6 +29,8 @@ namespace PrShop.Data
         public DbSet<Tag> Tags { get; set; }
         public DbSet<VisitorStatistic> VisitorStatisticsS { get; set; }
         public DbSet<Error> Errors { get; set; }
+        public DbSet<ContactDetail> ContactDetails { get; set; }
+        public DbSet<Feedback> Feedbacks { get; set; }
         public static PrShopDbContext Create()
         {
             return new PrShopDbContext();

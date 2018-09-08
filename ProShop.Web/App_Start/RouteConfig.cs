@@ -13,6 +13,17 @@ namespace PrShop.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // BotDetect requests must not be routed
+            routes.IgnoreRoute("{*botdetect}", new { botdetect = @"(.*)BotDetectCaptcha\.ashx" });
+
+            routes.MapRoute(
+            name: "Contact",
+            url: "lien-he.html",
+            defaults: new { controller = "Contact", action = "Index", id = UrlParameter.Optional },
+            namespaces: new string[] { "PrShop.Web.Controllers" }
+        );
+
+
             routes.MapRoute(
                name: "Search",
                url: "tim-kiem.html",
@@ -26,6 +37,12 @@ namespace PrShop.Web
                defaults: new { controller = "Account", action = "Login", id = UrlParameter.Optional },
                namespaces: new string[] { "PrShop.Web.Controllers" }
            );
+            routes.MapRoute(
+             name: "Register",
+             url: "dang-ky.html",
+             defaults: new { controller = "Account", action = "Register", id = UrlParameter.Optional },
+             namespaces: new string[] { "PrShop.Web.Controllers" }
+         );
             routes.MapRoute(
               name: "Page",
               url: "trang/{alias}.html",

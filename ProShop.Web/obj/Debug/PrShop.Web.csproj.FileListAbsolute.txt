@@ -86,3 +86,7 @@ D:\ASP.Net\PrShop\Git\ProShop.Web\bin\System.Web.Http.xml
 D:\ASP.Net\PrShop\Git\ProShop.Web\bin\System.Web.Http.WebHost.xml
 D:\ASP.Net\PrShop\Git\ProShop.Web\obj\Debug\ProShop.Web.dll
 D:\ASP.Net\PrShop\Git\ProShop.Web\obj\Debug\ProShop.Web.pdb
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\BotDetect.dll
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\BotDetect.Web.Mvc.dll
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\System.Web.Http.Owin.dll
+D:\ASP.Net\PrShop\Git\ProShop.Web\bin\System.Web.Http.Owin.xml

@@ -19,6 +19,7 @@
             CreatedProductCategorySample(context);            //var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new PrShopDbContext()));
             CreateSlide(context);
             CreatePage(context);
+            CreateContactDetail(context);
 
 
         }
@@ -115,7 +116,7 @@
             {
                 var page = new Page()
                 {
-                    Name="Giới thiệu",
+                    Name = "Giới thiệu",
                     Alias = "gioi-thieu",
                     Content = @"Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
                         accusantium doloremque laudantium, totam rem aperiam,
@@ -133,5 +134,27 @@
                 context.SaveChanges();
             }
         }
+        private void CreateContactDetail(PrShopDbContext context)
+        {
+            if (context.ContactDetails.Count() == 0)
+            {
+                var contactDetail = new PrShop.Model.Models.ContactDetail
+                {
+                    Name = "Shop thời trang",
+                    Address = "4 Núi Thành",
+                    Email = "thanhhung6066@gmail.com",
+                    Lat = 10.7998601,
+                    Lng = 106.6395778,
+                    Phone = "0966181747",
+                    Other = "",
+                    Website = "shop.com.vn",
+                    Status = true
+                    
+                };
+                context.ContactDetails.Add(contactDetail);
+                context.SaveChanges();
+            }
+        }
+
     }
 }

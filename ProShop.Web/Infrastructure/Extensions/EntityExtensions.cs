@@ -1,34 +1,31 @@
 ﻿using ProShop.Web.Models;
 using PrShop.Model.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace ProShop.Web.Infrastructure.Extensions
 {
     public static class EntityExtensions
     {
         public static void UpdatePostCategory(this PostCategory postCategory, PostCategoryViewModel postCategoryVm)
-            {
-                postCategory.ID = postCategoryVm.ID;
-                postCategory.Name = postCategoryVm.Name;
-                postCategory.Description = postCategoryVm.Description;
-                postCategory.Alias = postCategoryVm.Alias;
-                postCategory.ParentID = postCategoryVm.ParentID;
-                postCategory.DisplayOrder = postCategoryVm.DisplayOrder;
-                postCategory.Image = postCategoryVm.Image;
-                postCategory.HomeFlag = postCategoryVm.HomeFlag;
+        {
+            postCategory.ID = postCategoryVm.ID;
+            postCategory.Name = postCategoryVm.Name;
+            postCategory.Description = postCategoryVm.Description;
+            postCategory.Alias = postCategoryVm.Alias;
+            postCategory.ParentID = postCategoryVm.ParentID;
+            postCategory.DisplayOrder = postCategoryVm.DisplayOrder;
+            postCategory.Image = postCategoryVm.Image;
+            postCategory.HomeFlag = postCategoryVm.HomeFlag;
 
-                postCategory.CreateDate = postCategoryVm.CreateDate;
-                postCategory.CreateBy = postCategoryVm.CreateBy;
-                postCategory.UpdateDate = postCategoryVm.UpdateDate;
-                postCategory.UpdateBy = postCategoryVm.UpdateBy;
-                postCategory.MetaKeyword = postCategoryVm.MetaKeyword;
-                postCategory.MetaDescription = postCategoryVm.MetaDescription;
-                postCategory.Status = postCategoryVm.Status;
-
+            postCategory.CreateDate = postCategoryVm.CreateDate;
+            postCategory.CreateBy = postCategoryVm.CreateBy;
+            postCategory.UpdateDate = postCategoryVm.UpdateDate;
+            postCategory.UpdateBy = postCategoryVm.UpdateBy;
+            postCategory.MetaKeyword = postCategoryVm.MetaKeyword;
+            postCategory.MetaDescription = postCategoryVm.MetaDescription;
+            postCategory.Status = postCategoryVm.Status;
         }
+
         public static void UpdatePost(this Post post, PostViewModel postVm)
         {
             post.ID = postVm.ID;
@@ -48,7 +45,19 @@ namespace ProShop.Web.Infrastructure.Extensions
             post.MetaKeyword = postVm.MetaKeyword;
             post.MetaDescription = postVm.MetaDescription;
             post.Status = postVm.Status;
-           
+        }
+        public static void UpdateContactDetail(this ContactDetail contactDetail, ContactDetailViewModel contactDetailVm)
+        {
+            contactDetail.ID = contactDetailVm.ID;
+            contactDetail.Name = contactDetailVm.Name;
+            contactDetail.Phone = contactDetailVm.Phone;
+            contactDetail.Email = contactDetailVm.Email;
+            contactDetail.Address = contactDetailVm.Address;
+            contactDetail.Lat = contactDetailVm.Lat;
+            contactDetail.Lng = contactDetailVm.Lng;
+            contactDetail.Website = contactDetailVm.Website;
+            contactDetail.Other = contactDetailVm.Other;
+            contactDetail.Status = contactDetailVm.Status;
 
         }
         public static void UpdateProduct(this Product product, ProductViewModel productVm)
@@ -77,9 +86,8 @@ namespace ProShop.Web.Infrastructure.Extensions
             product.Status = productVm.Status;
             product.Tags = productVm.Tags;
             product.Quantity = productVm.Quantity;
-
-
         }
+
         public static void UpdateProductCategory(this ProductCategory productCategory, ProductCategoryViewModel productCategoryVm)
         {
             productCategory.ID = productCategoryVm.ID;
@@ -98,9 +106,8 @@ namespace ProShop.Web.Infrastructure.Extensions
             productCategory.MetaKeyword = productCategoryVm.MetaKeyword;
             productCategory.MetaDescription = productCategoryVm.MetaDescription;
             productCategory.Status = productCategoryVm.Status;
-
-
         }
+
         public static void UpdatePage(this Page page, PageViewModel pageVm)
         {
             page.ID = pageVm.ID;
@@ -109,6 +116,13 @@ namespace ProShop.Web.Infrastructure.Extensions
             page.Content = pageVm.Content;
             pageVm.Status = pageVm.Status;
         }
-
+        public static void UpdateFeedback(this Feedback feedback, FeedbackViewModel feedbackVm)
+        {
+            feedback.Name = feedbackVm.Name;
+            feedback.Email = feedbackVm.Email;
+            feedback.Message = feedbackVm.Message;
+            feedback.Status = feedbackVm.Status;
+            feedback.CreatedDate = DateTime.Now;
+        }
     }
 }
