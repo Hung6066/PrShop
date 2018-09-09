@@ -25,3 +25,4 @@ D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\ProShop.Data.Migrations.AddMoreQuan
 D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\ProShop.Data.Migrations.Addforeinkey.resources
 D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\ProShop.Data.Migrations.ContactDetail.resources
 D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\ProShop.Data.Migrations.AddFeedback.resources
+D:\ASP.Net\PrShop\Git\ProShop.Data\obj\Debug\ProShop.Data.Migrations.AddCustomerId.resources

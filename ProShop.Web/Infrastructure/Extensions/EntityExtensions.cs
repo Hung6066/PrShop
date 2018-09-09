@@ -1,6 +1,8 @@
-﻿using ProShop.Web.Models;
+﻿using AutoMapper;
+using ProShop.Web.Models;
 using PrShop.Model.Models;
 using System;
+using System.Collections.Generic;
 
 namespace ProShop.Web.Infrastructure.Extensions
 {
@@ -60,6 +62,22 @@ namespace ProShop.Web.Infrastructure.Extensions
             contactDetail.Status = contactDetailVm.Status;
 
         }
+        public static void UpdateOrder(this Order order, OrderViewModel orderVm)
+        {
+            order.CustomerName = orderVm.CustomerName;
+            order.CustomerAddress = orderVm.CustomerAddress;
+            order.CustomerEmail = orderVm.CustomerEmail;
+            order.CustomerMobile = orderVm.CustomerMobile;
+            order.CustomerMessage = orderVm.CustomerMessage;
+            order.PaymentMethod = orderVm.PaymentMethod;
+            order.CreatedDate = DateTime.Now;
+            order.CreatedBy = orderVm.CreatedBy;
+            order.Status = orderVm.Status;
+            order.CustomerId = orderVm.CustomerId;
+            order.OrderDetails = Mapper.Map<IEnumerable<OrderDetailViewModel>,IEnumerable<OrderDetail>>(orderVm.OrderDetails);
+
+        }
+
         public static void UpdateProduct(this Product product, ProductViewModel productVm)
         {
             product.ID = productVm.ID;

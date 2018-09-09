@@ -5,6 +5,7 @@ using System.Web;
 
 namespace ProShop.Web.Models
 {
+    [Serializable]
     public class ProductViewModel
     {
         public int ID { get; set; }
